@@ -6,11 +6,9 @@ describe 'Encrypting JSON' do
       age: '42',
       gender: 'male' }
   end
-  let(:cipher_key) { 'DB5E8D7DD93F4633F1838E5E73BA9' }
-  let(:hmac_key) { '8DC83DF63ADAA34487F2F73D78846' }
 
   specify 'I can encrypt the JSON string' do
-    encryptor = Roto::Encryptor.new(cipher_key, hmac_key)
+    encryptor = Roto::Encryptor.new(test_cipher_key, test_hmac_key)
     expect(encryptor.encrypt(json)).to_not be_nil
   end
 end
