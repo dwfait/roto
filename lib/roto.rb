@@ -1,5 +1,7 @@
-require "roto/version"
+require 'roto/version'
+require 'roto/encryptor'
+require 'roto/decryptor'
+require 'roto/errors'
 
 module Roto
-  # Your code goes here...
 end
