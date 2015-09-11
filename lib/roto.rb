@@ -1,3 +1,4 @@
+require 'openssl'
 require 'roto/version'
 require 'roto/encryptor'
 require 'roto/decryptor'
