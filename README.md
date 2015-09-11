@@ -34,6 +34,12 @@ encryptor = Roto::Encryptor.new(cipher_key, hmac_key)
 encrypted = encryptor.encrypt(json)
 ```
 
+where `cipher_key` and `hmac_key` are 128-bit keys.
+
+You can generate a secure random key via the OpenSSL library with the following command:
+```openssl enc -aes-128-cbc -k secret -P -md sha1```
+
+
 ## Decrypting
 ```Ruby
 decryptor = Roto::Decryptor.new(cipher_key, hmac_key)
